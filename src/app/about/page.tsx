@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'About',
+  description: 'About page',
+  keywords: 'nextjs, typescript, tailwindcss',
+};
+
 export default function AboutPage() {
   return (
     <>

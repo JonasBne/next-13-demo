@@ -1,5 +1,9 @@
+export const metadata = {
+  title: 'Home',
+  description: 'Homepage',
+  keywords: 'nextjs, typescript, tailwindcss',
+};
+
 export default function Home() {
-  return (
-    <div>hello world</div>
-  )
+  return <h1>Homepage</h1>;
 }
