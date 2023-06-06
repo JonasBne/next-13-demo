@@ -1,3 +1,4 @@
+import { Header } from './components/Header';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -10,8 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <main className='m-6'>{children}</main>
+      <body className={`${inter.className} p-6`}>
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -4,6 +4,6 @@ export const metadata = {
   keywords: 'nextjs, typescript, tailwindcss',
 };
 
-export default function Home() {
+export default function HomePage() {
   return <h1>Homepage</h1>;
 }
