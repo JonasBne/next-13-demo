@@ -1,4 +1,5 @@
 import { RepositoryCard } from '@/app/components/RepositoryCard';
+import { Suspense } from 'react';
 
 export type Repository = {
   id: number;
@@ -11,6 +12,7 @@ export type Repository = {
 
 async function fetchRepositories() {
   const response = await fetch('https://api.github.com/users/jonasbne/repos');
+
   const repositories: Array<Repository> = await response.json();
   return repositories;
 }
@@ -20,11 +22,13 @@ export default async function RepositoriesPage() {
   return (
     <div className='flex flex-col items-center'>
       <h2 className='mb-4'>Repositories</h2>
-      <ul>
-        {repositories.map((repository) => (
-          <RepositoryCard key={repository.id} repository={repository} />
-        ))}
-      </ul>
+      <Suspense>
+        <ul>
+          {repositories.map((repository) => (
+            <RepositoryCard key={repository.id} repository={repository} />
+          ))}
+        </ul>
+      </Suspense>
     </div>
   );
 }
