@@ -1,6 +1,6 @@
 import { AddNote } from '../components/features/AddNote';
 import { NoteCard } from '../components/features/NoteCard';
-import { Button } from 'antd';
+import { Button } from '@antd';
 
 export const metadata = {
   title: 'About',
@@ -27,6 +27,9 @@ export default async function NotesPage() {
   return (
     <>
       <AddNote />
+      <Button className='bg-white text-red-200' type='primary'>
+        Button Server
+      </Button>
       <ul className='mt-4'>
         {notes.map((note) => (
           <NoteCard key={note.id} note={note} />
