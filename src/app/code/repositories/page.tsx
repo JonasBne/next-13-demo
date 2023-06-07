@@ -1,3 +1,4 @@
+import { Loading } from '@/app/components/Loading';
 import { RepositoryCard } from '@/app/components/RepositoryCard';
 import { Suspense } from 'react';
 
@@ -22,10 +23,14 @@ export default async function RepositoriesPage() {
   return (
     <div className='flex flex-col items-center'>
       <h2 className='mb-4'>Repositories</h2>
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <ul>
           {repositories.map((repository) => (
-            <RepositoryCard key={repository.id} repository={repository} />
+            <RepositoryCard
+              key={repository.id}
+              redirectUrl={`/code/repositories/${repository.name}`}
+              repository={repository}
+            />
           ))}
         </ul>
       </Suspense>

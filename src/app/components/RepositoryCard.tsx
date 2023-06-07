@@ -6,18 +6,22 @@ import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa';
 import { Repository } from '../code/repositories/page';
 
 interface Props {
+  redirectUrl: string;
   repository: Repository;
 }
 
-export const RepositoryCard = ({ repository }: Props) => {
+export const RepositoryCard = ({ redirectUrl, repository }: Props) => {
   return (
     <motion.button
       className='w-full'
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 1.02 }}
     >
-      <li className='bg-gray-700 mb-4 rounded-md p-4' key={repository.id}>
-        <Link href={`/code/repositories/${repository.name}`}>
+      <div
+        className='bg-gray-700 mb-4 rounded-md p-4 list-none'
+        key={repository.id}
+      >
+        <Link href={redirectUrl}>
           <h3 className='font-bold'>{repository.name}</h3>
           <p className='font-light text-sm'>
             Description: {repository.description || 'n/a'}
@@ -37,7 +41,7 @@ export const RepositoryCard = ({ repository }: Props) => {
             </div>
           </div>
         </Link>
-      </li>
+      </div>
     </motion.button>
   );
 };
