@@ -8,7 +8,7 @@ export const Header = () => {
       </h1>
       <ul className='flex gap-x-4'>
         <Link href='/'>Home</Link>
-        <Link href='/about'>About</Link>
+        <Link href='/notes'>Quick notes</Link>
         <Link href={`/code/repositories`}>Repositories</Link>
       </ul>
     </header>
