@@ -1,4 +1,4 @@
-import { Note } from '../notes/page';
+import { Note } from '../../notes/page';
 import { format } from 'date-fns';
 
 interface Props {
