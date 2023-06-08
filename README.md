@@ -1,4 +1,8 @@
+# Next 13 Demo
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+This repository is based on the [Next 13 crash course on YouTube of Traversy Media](https://www.youtube.com/watch?v=Y6KDk5iyrYE&pp=ygUUbmV4dCAxMyBjcmFzaCBjb3Vyc2U%3D). I have used it to familiarize myself with the basic concepts of Next 13, therefore I cut some corners here and there. The main goal was getting up to speed with Next and RSC.
 
 ## Getting Started
 
